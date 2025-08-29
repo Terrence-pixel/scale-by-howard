@@ -1,0 +1,265 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+  color: #d4af37;
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #111;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #d4af37;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background: #d4af37;
+  color: #0a0a0a;
+}
+
+/* Services */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #111;
+  padding: 2rem;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  background: #111;
+  padding: 3rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  border-color: #d4af37;
+  transform: scale(1.05);
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.whatsapp {
+  border-color: #25d366;
+  color: #25d366;
+}
+
+.whatsapp:hover {
+  background: #25d366;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #000;
+  color: #777;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  background: #0c0c0c;
+}
+
+#testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #d4c322;
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #252222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(243, 239, 7, 0.856);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #fcf9f9;
+}
+
+.testimonial-card h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #e0d8d8;
+}
+
+.rating {
+  color: #f1c40f; /* golden stars */
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* NAVBAR STYLES */
+.nav-bar {
+  display: flex;
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.315); /* transparent glassy bg */
+  backdrop-filter: blur(8px); /* cool glass effect */
+  z-index: 1000;
+  border-bottom: 1px solid #ddd; /* subtle line */
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+/* NAVIGATION LINKS */
+.navigation {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #d49e28;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline hover animation */
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #d4a919; /* green underline */
+  transition: width 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ffffff;
+}
+
+.navigation a:hover::after {
+  width: 100%; /* underline grows */
+}
