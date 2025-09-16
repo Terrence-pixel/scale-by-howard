@@ -264,3 +264,19 @@ footer {
 .navigation a:hover::after {
   width: 100%; /* underline grows */
 }
+
+@media (max-width: 780px) {
+  .portfolio-grid {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .portfolio-item {
+    padding: 1rem;
+  }
+}
